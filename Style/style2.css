@@ -1,0 +1,161 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background: Dynamic Gradient with Purple, Black, and White */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #212121, #9C27B0, #4A148C); /* Black to purple gradient */
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite; /* Animated gradient */
+    color: #f4f4f4;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Content Container Styling */
+#content {
+    background: rgba(0, 0, 0, 0.75); /* Darker black background with opacity */
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border: 3px solid #9C27B0; /* Purple border for elegance */
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.8); /* Deep shadow for depth */
+    backdrop-filter: blur(15px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease; /* Smooth effects */
+}
+
+#content:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.9); /* Stronger shadow on hover */
+    opacity: 1; /* Slight increase in opacity for smooth hover */
+}
+
+/* Heading Style */
+#loging {
+    font-size: 32px;
+    color: #FFF;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Soft glowing text effect */
+    font-weight: 700;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+    border: 2px solid #9C27B0;
+    border-radius: 12px;
+    font-size: 18px;
+    background: #333; /* Dark input background */
+    color: #D500F9; /* Light purple text for readability */
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #D500F9; /* Purple border when focused */
+    background: #444; /* Slightly darker background */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8), 0 0 15px #9C27B0; /* Purple glowing focus effect */
+}
+
+/* Input Container */
+.input-container {
+    margin-bottom: 25px;
+    position: relative;
+    width: 100%;
+}
+
+/* Label for Input Fields */
+.input-container label {
+    display: block;
+    font-size: 15px;
+    color: #9C27B0; /* Purple color for labels */
+    margin-bottom: 8px;
+}
+
+/* Button Styling */
+#Loging {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(90deg, #9C27B0, #D500F9); /* Smooth purple gradient */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.4s ease, transform 0.3s ease;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    border: 2px solid #fff; /* White border for contrast */
+}
+
+#Loging:hover {
+    background: linear-gradient(90deg, #D500F9, #9C27B0); /* Reverse gradient on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6); /* Stronger glow effect */
+}
+
+/* Links (Fog password & Register) */
+#fogpass, #register {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #9C27B0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#fogpass a:hover, #register:hover {
+    text-decoration: underline;
+    color: #FFFFFF; /* White text on hover */
+}
+
+/* Adding small amount of white for contrast and sleekness */
+body, #content, input[type="text"], input[type="password"], #Loging {
+    color: #fff; /* White text for better readability */
+}
+
+#content {
+    border: 3px solid #fff; /* White border for contrast */
+}
+
+/* Adding slight white shadow effect for better text readability */
+#loging, #Loging, input[type="text"], input[type="password"] {
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Subtle white glow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #content {
+        padding: 20px;
+        width: 90%;
+    }
+
+    #loging {
+        font-size: 26px;
+    }
+
+    #Loging {
+        font-size: 16px;
+        padding: 14px;
+    }
+}

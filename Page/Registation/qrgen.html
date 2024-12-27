@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="../../Style/qrstyle.css">
+</head>
+<body>
+    <!-- QR box -->
+    <div id="bagground" class="bagground">
+        <div id="fild">
+            <div id="qrbox">
+                <div id="qr-code">
+                    <img src="" id="qrimage" alt="QR Code">
+                </div>
+            </div>
+            <div id="massage">
+                <p>Successfully registered! ✅</p>
+                <br>
+                <p>⚠️ Important: Right-click on the QR code and select 'Save As' to download it as an image, or copy the page URL.</p>
+            </div>
+            <button id="download-btn" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">
+                Download QR Code
+            </button>
+
+        </div>
+    </div>
+    
+    <!-- Link to your external JavaScript file -->
+    <script src="../../Script/script3.js"></script>
+</body>
+</html>

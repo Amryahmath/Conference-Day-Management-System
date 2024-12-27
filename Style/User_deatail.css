@@ -1,0 +1,124 @@
+/* Background container */
+body {
+    background-image: url('../image/meating.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centralized container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 15px;
+}
+
+/* Form container with dynamic styling */
+.form-container {
+    background: rgba(119, 72, 153, 0.1); /* Subtle black overlay */
+    border: 2px solid rgba(0, 0, 0, 0.4); /* Black border */
+    backdrop-filter: blur(20px); /* Glassmorphism effect */
+    padding: 25px 35px;
+    border-radius: 15px;
+    width: 450px;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3); /* Shadow with black tone */
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.5); /* Stronger shadow */
+    background: rgba(0, 0, 0, 0.2); /* Darker overlay on hover */
+    backdrop-filter: blur(20px); /* Keep the blur effect */
+}
+
+/* Prevent text from blurring */
+.form-container * {
+    backdrop-filter: none !important; /* Exclude text and form elements from the blur */
+}
+
+/* Heading style */
+h1 {
+    font-size: 26px;
+    color: #D500F9; /* Purple text */
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase; /* Add some uniqueness */
+}
+
+/* Label styling */
+.form-label {
+    font-weight: bold;
+    color: #9C27B0; /* Purple label color */
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input fields with dynamic look */
+.form-control {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05); /* Light black background */
+    border: 2px solid rgba(0, 0, 0, 0.3); /* Dark border */
+    border-radius: 8px;
+    padding: 16px 20px; /* Increased padding for larger input fields */
+    margin-bottom: 20px;
+    font-size: 18px; /* Increased font size */
+    color: #D500F9; /* Purple text color */
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #9C27B0; /* Purple border on focus */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    outline: none;
+}
+
+/* Button styling */
+.btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(90deg, #9C27B0, #D500F9); /* Purple gradient */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #4A148C, #9C27B0); /* Darker purple hover gradient */
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        width: 100%;
+        max-width: 400px; /* Adjust width for smaller screens */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px; /* Adjust font size */
+    }
+
+    .form-control {
+        padding: 14px 18px; /* Adjust padding */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .btn {
+        font-size: 14px; /* Adjust button font size */
+        padding: 10px 18px;
+    }
+}

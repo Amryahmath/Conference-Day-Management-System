@@ -1,0 +1,115 @@
+/* Background container */
+#bagground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #212121, #9C27B0, #4A148C); /* Black and purple gradient */
+    margin: 0;
+}
+
+/* Form container */
+#fild {
+    width: 600px;
+    height: 500px;
+    padding: 20px;
+    background: #333; /* Dark background */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Deep shadow */
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #9C27B0; /* Purple border */
+    transition: transform 0.3s ease; /* Adds dynamic hover effect */
+}
+
+#fild:hover {
+    transform: scale(1.02); /* Slight scale-up for interactivity */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Darker shadow effect */
+}
+
+/* QR code container */
+#qrbox {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #C0E0ED; /* Light blue background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#qrbox {
+    background: #424242; /* Dark grey background to match the darker theme */
+}
+
+/* QR image styling */
+#qrimage {
+    width: 175px;
+    height: 175px;
+    border: 2px solid #9C27B0; /* Purple border */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#qrimage:hover {
+    transform: rotate(10deg) scale(1.05); /* Dynamic rotation and zoom */
+    box-shadow: 0 8px 20px rgba(0, 0, 255, 0.4); /* Glow effect */
+}
+
+/* Message styling */
+#massage p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #D500F9; /* Purple text */
+    margin: 0;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.4); /* Glowing purple text */
+}
+
+/* Button styling */
+#fild button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF; /* White text */
+    background: linear-gradient(90deg, #9C27B0, #D500F9); /* Purple gradient */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+#fild button:hover {
+    background: linear-gradient(90deg, #D500F9, #9C27B0); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Stronger glow effect */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #fild {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    #qrbox {
+        padding: 20px;
+        background: #333; /* Match darker theme for small screens */
+    }
+
+    #qrimage {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Adjust text size on smaller screens */
+    #massage p {
+        font-size: 18px;
+    }
+
+    #fild button {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}
